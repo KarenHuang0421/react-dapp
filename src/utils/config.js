@@ -1,8 +1,50 @@
-export const CONTRACT_ADDRESS = "0xd9145CCE52D386f254917e481eB44e9943F39138";
+export const CONTRACT_ADDRESS = "0xc2132D05D31c914a87C6611C10748AEb04B58e8F";
 export const CONTRACT_ABI = [
   {
-    inputs: [],
-    name: "retrieve",
+    inputs: [
+      {
+        internalType: "address",
+        name: "spender",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+    ],
+    name: "approve",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "recipient",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+    ],
+    name: "transfer",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "balanceOf",
     outputs: [
       {
         internalType: "uint256",
@@ -11,19 +53,6 @@ export const CONTRACT_ABI = [
       },
     ],
     stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "num",
-        type: "uint256",
-      },
-    ],
-    name: "store",
-    outputs: [],
-    stateMutability: "nonpayable",
     type: "function",
   },
 ];
