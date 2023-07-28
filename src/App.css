@@ -4,11 +4,6 @@
   min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .body {
   height: 100vh;
   width: 100vw;
@@ -16,11 +11,6 @@
   /* color: white; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -37,11 +27,20 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
+@keyframes spinner {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #383636; /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
